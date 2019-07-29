@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6823fe2-f1a7-46f3-9fb7-9f40e25c6a25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PY/NEW.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PY/tem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new/first.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new/img/000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new/second.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zdhce" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/说明文档.txt" beforeDir="false" afterPath="$PROJECT_DIR$/说明文档.txt" afterDir="false" />
-    </list>
+    <list default="true" id="b6823fe2-f1a7-46f3-9fb7-9f40e25c6a25" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,11 +155,18 @@
       <option name="presentableId" value="Default" />
       <updated>1564381631337</updated>
     </task>
+    <task id="LOCAL-00001" summary="第三次提交">
+      <created>1564391879185</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564391879195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="0" width="1346" height="688" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -191,6 +187,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第三次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第三次提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/modules/yancloud/debug.log">
