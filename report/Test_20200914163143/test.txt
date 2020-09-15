@@ -1,3 +1,0 @@
-test_correct_login (login.login_test.loginTest) ... FAIL
-test_passerr_login (login.login_test.loginTest) ... ok
-test_usererr_login (login.login_test.loginTest) ... 
