@@ -1,17 +1,22 @@
-#-*_coding:utf-8-*-
-import unittest
-from selenium import webdriver
-from driver import browser
+#coding=utf-8 
+
+import unittest,os,sys,time
+
+path_load_ini=os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+path_load_ini=path_load_ini.replace('\\', '/')
+sys.path.append(path_load_ini)
+from modules.mains import log
+from modules.mains.browser import chrome
+
+testurl="https://10.10.11.3:9004"
 
 class MyTest(unittest.TestCase):
-    def setUp(self):
-        br=browser()
-        br.implicitly_wait(10)
-        br.maximize_window()
+    @classmethod
+    def setUpClass(cls):
+        chrome
+        chrome.open_url(testurl)
 
-def tearDown(self):
-    driver.quit()
-
-if __name__=='__main__':
-    unittest.main()
+    @classmethod
+    def tearDownClass(cls):
+        chrome.quit()
     

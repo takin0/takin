@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM">
+    <file url="file://$PROJECT_DIR$/modules/mains/browser.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/modules/yancloud/debug.log" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/目录.txt" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
