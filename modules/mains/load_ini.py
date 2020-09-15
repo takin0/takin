@@ -17,15 +17,15 @@ section = cfgp.sections()
 #print(path_load_ini)
 
 #某一章节的字段
-option1=cfgp.options("browser_path")
+option1=cfgp.options("browser")
 #print(option1)
 
 #某一字段的值
-path_chrome=cfgp.get("browser_path","chrome")
-path_firefox=cfgp.get("browser_path","firefox")
-path_ie=cfgp.get("browser_path","ie")
-path_ide=cfgp.get("browser_path","ide")
-path_other=cfgp.get("browser_path","other")
+browser_path=cfgp.get("browser","browser_path")
+driver_path=cfgp.get("browser","driver_path")
+browser_kernel=cfgp.get("browser","browser_kernel")
+#path_ide=cfgp.get("browser_path","ide")
+#path_other=cfgp.get("browser_path","other")
 
 email_smtpserver=cfgp.get("email","smtpserver")
 email_username=cfgp.get("email","username")

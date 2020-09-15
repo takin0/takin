@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 from modules.mains import myunit as myut
-from modules.mains.browser import chrome
+from modules.mains.browser import browser
 from modules.yancloud.login import login_procs as lg
 
 class loginTest(myut.MyTest):
@@ -20,7 +20,7 @@ class loginTest(myut.MyTest):
         if text==ts:
             pass
         else:
-            chrome.create_img(sys._getframe().f_code.co_name)
+            browser.create_img(sys._getframe().f_code.co_name)
         self.assertEqual(ts, text)
 
     def test_usererr_login(self):

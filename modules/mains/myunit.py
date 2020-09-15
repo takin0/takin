@@ -6,17 +6,14 @@ path_load_ini=os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(_
 path_load_ini=path_load_ini.replace('\\', '/')
 sys.path.append(path_load_ini)
 from modules.mains import log
-from modules.mains.browser import chrome
-
-testurl="https://10.10.11.3:9004"
+from modules.mains.browser import browser
 
 class MyTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        chrome
-        chrome.open_url(testurl)
+        browser
 
     @classmethod
     def tearDownClass(cls):
-        chrome.quit()
+        browser.quit()
     

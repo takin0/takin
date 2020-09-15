@@ -16,24 +16,20 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 from modules.mains.new_report import newreport
-from modules.mains.load_ini import path_ie,path_chrome,path_firefox,path_ide,path_other
-
-
+#from modules.mains.load_ini import path_ie,path_chrome,path_firefox,path_ide,path_other
+from modules.mains.load_ini import browser_path,driver_path,browser_kernel
+               
 class Browser():
-        def __init__(self,name,kernel):
-                self.name=name
-                self.kernel=kernel
-                __browser_url =eval("path_"+name)
-                options = eval("webdriver."+kernel.title()+"Options()")
-                #options.add_argument("--headless")
-                options.add_argument('--ignore-certificate-errors')
-                #options.add_argument("--user-data-dir="+os.getenv("USERPROFILE")+"/AppData/Local/Google/Chrome/User Data/Default");
-                options.binary_location = __browser_url
-                driver_path=path_base+"\\driver\\{}driver.exe".format(name)
-                #self.dr=eval("webdriver."+kernel.title()+"(driver_path,options=options)")
-                #try:
-                self.dr=eval("webdriver."+kernel.title()+"(driver_path,options=options)")
 
+        def __init__(self):
+                options = eval("webdriver."+browser_kernel.title()+"Options()")
+                #options.add_argument("--headless")#不打开浏览器窗口
+                options.add_argument('--ignore-certificate-errors')
+                
+                #options.add_argument("--user-data-dir="+os.getenv("USERPROFILE")+"/AppData/Local/Google/Chrome/User Data/Default");#chrome浏览器使用默认用户信息
+                options.binary_location = browser_path
+                self.dr=eval("webdriver."+browser_kernel.title()+"(executable_path=driver_path,options=options)")
+                #self.dr=eval("webdriver."+browser_kernel.title()+"(driver_path)") #edge浏览器没有options参数
 #2最大化
         def max(self,xnm='',ynm=''):
                 if xnm and ynm:
@@ -332,7 +328,8 @@ class Browser():
                 
                 creat_chrome=Browser("chrome","Chrome")
                 return Browser
-chrome=Browser("chrome","Chrome")
+#chrome=Browser("chrome","Chrome")
+browser=Browser()
 '''                
 ie=Browser("ie","Ie")
 chrome=Browser("chrome","Chrome")
@@ -342,6 +339,6 @@ ie=Browser("ie","Ie")
 other=Browser("other","Chrome")
 '''
 if __name__ == "__main__":
-        chrome=Browser("chrome","Chrome")
-        chrome.open_url("https://10.10.11.3:9004")
+        #chrome=Browser("chrome","Chrome")
+        browser.open_url("https://10.10.11.3:9004")
 

@@ -1,10 +1,18 @@
 #coding=utf-8
 #截图函数
-import os,datetime
+import os,sys,time,datetime
 path_base=os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 path_base=path_base.replace('\\', '/')
+sys.path.append(path_base)
 from modules.mains import log
 #print(path_base)
+
+def creat_report():
+        newdir="Test_"+time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
+        file_path=path_base+"/report/"+newdir+"/image/"
+        fp=os.makedirs(file_path)
+        report_path=path_base+"/report/"+newdir+"/test.txt"
+        return report_path
 
 def newreport():
         dir_path=path_base+"/report/"#测试报告路径
@@ -23,6 +31,9 @@ def newreport():
         file_path=dir_path+newdir#最新报告文件夹路径
         return file_path,newdir
 
-if __name__=='__main__':
-        newreport()
 
+
+if __name__=='__main__':
+        
+        creat_report()
+        newreport()

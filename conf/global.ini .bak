@@ -1,0 +1,13 @@
+[browser_path]
+chrome=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+firefox=G:\firefox\firefox.exe
+ie=C:\Program Files\Internet Explorer\iexplore.exe
+ide=C:\Users\tianjing01\Desktop\YanCloudDaasGenPlatform\YancloudDaasGenplatform.exe
+other=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+[email]
+smtpserver=smtp.qq.com
+username=1254881277@qq.com
+from_addr=1254881277@qq.com
+password=wbezjlgyenpyibhe
+
+to_addr=tianjing@internetware.cn,1254881277@qq.com
