@@ -1,0 +1,52 @@
+test_correct_login (login.login_test.loginTest) ... ERROR
+test_passerr_login (login.login_test.loginTest) ... FAIL
+test_usererr_login (login.login_test.loginTest) ... FAIL
+
+======================================================================
+ERROR: test_correct_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 19, in test_correct_login
+    ts=lg.xinxi()
+  File "D:\私人\takin\model\modules\yancloud\login\login_procs.py", line 54, in xinxi
+    a=brc.text()
+  File "D:\私人\takin\model\modules\mains\browser.py", line 216, in text
+    info=em.get_attribute("textContent")
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webelement.py", line 141, in get_attribute
+    self, name)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 636, in execute_script
+    'args': converted_args})['value']
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.135)
+
+
+======================================================================
+FAIL: test_passerr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 38, in test_passerr_login
+    self.assertEqual(ts, text)
+AssertionError: '  登录' != '用户名或密码不正确！'
+-   登录
++ 用户名或密码不正确！
+
+
+======================================================================
+FAIL: test_usererr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 31, in test_usererr_login
+    self.assertEqual(ts, text)
+AssertionError: '  登录' != '用户名或密码不正确！'
+-   登录
++ 用户名或密码不正确！
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 102.222s
+
+FAILED (failures=2, errors=1)

@@ -1,0 +1,64 @@
+test_correct_login (login.login_test.loginTest) ... FAIL
+test_passerr_login (login.login_test.loginTest) ... ERROR
+test_usererr_login (login.login_test.loginTest) ... ERROR
+
+======================================================================
+ERROR: test_passerr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 33, in test_passerr_login
+    lg.login("superadmin","P#ssw0rd")
+  File "D:\私人\takin\model\modules\yancloud\login\login_procs.py", line 25, in login
+    brc.input(testname)
+  File "D:\私人\takin\model\modules\mains\browser.py", line 202, in input
+    em.send_keys(shuju)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.135)
+
+
+======================================================================
+ERROR: test_usererr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 26, in test_usererr_login
+    lg.login("supera","P@ssw0rd")
+  File "D:\私人\takin\model\modules\yancloud\login\login_procs.py", line 25, in login
+    brc.input(testname)
+  File "D:\私人\takin\model\modules\mains\browser.py", line 202, in input
+    em.send_keys(shuju)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.135)
+
+
+======================================================================
+FAIL: test_correct_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 23, in test_correct_login
+    self.assertEqual(ts, text)
+AssertionError: '登录成功' != '登录1成功'
+- 登录成功
++ 登录1成功
+?   +
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 28.593s
+
+FAILED (failures=1, errors=2)
