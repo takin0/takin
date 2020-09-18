@@ -30,5 +30,5 @@ def run_suite(test_dir,description=u"自动化测试报告"):
 
 if __name__=='__main__':
         
-    creat_suite(test_dir)
+    #creat_suite(test_dir)
     run_suit(test_dir)

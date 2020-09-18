@@ -14,13 +14,20 @@ path_base=path_base.replace('\\', '/')
 sys.path.append(path_base)
 from modules.mains import log
 from modules.mains.new_report import newreport
-from modules.mains.load_ini import email_smtpserver,email_username,email_password,\
-email_from_addr,email_to_addr
+from modules.mains.load_ini import ReadConfig
+
+emlcf = ReadConfig()
+email_smtpserver = emlcf.get_emcf("smtpserver")
+email_username = emlcf.get_emcf("username")
+email_password = emlcf.get_emcf("password")
+email_from_addr = emlcf.get_emcf("from_addr")
+email_to_addr = emlcf.get_emcf("to_addr")
+email_port = emlcf.get_emcf("port")
 
 def send_mail():
-    source_dir=newreport()#查找最新报告的路径
-    source_dir=source_dir[0]#打包报告的路径 
-    output_filename=source_dir+'.zip'#打包后的存放路径
+    source_dir = newreport()#查找最新报告的路径
+    source_dir = source_dir[0]#打包报告的路径 
+    output_filename = source_dir+'.zip'#打包后的存放路径
     #打包测试报告
     zipf = zipfile.ZipFile(output_filename, 'w')
     pre_len = len(os.path.dirname(source_dir))
@@ -34,12 +41,12 @@ def send_mail():
     smtpserver = email_smtpserver
     from_addr = email_username
     password = email_password
-    port=587
+    port = email_port 
 
     #附件路径及文件名
-    report=newreport()#再次调用查找打包好的文件
-    file_name=report[1]#打包后的文件名
-    file=report[0]#打包后的路径
+    report = newreport()#再次调用查找打包好的文件
+    file_name = report[1]#打包后的文件名
+    file = report[0]#打包后的路径
     #print(file_name)
     #print(file)
     #邮件主题
@@ -51,7 +58,7 @@ def send_mail():
     mg['Subject'] = subject
     mg['From'] = formataddr(["自动化测试程序",from_addr])
     mg.attach(MIMEText('您好，本次自动化测试已结束，测试报告以附件形式发送，请查阅！', 'plain', 'utf-8'))
-    fj= MIMEApplication(open(file,'rb').read())
+    fj =  MIMEApplication(open(file,'rb').read())
     fj.add_header('Content-Disposition','attachment',filename=file_name)
     mg.attach(fj)
 
@@ -70,5 +77,5 @@ def send_mail():
     except smtplib.SMTPException:
         print ("发送邮件失败")
 
-if __name__=='__main__':
+if __name__ == '__main__':
         send_mail()

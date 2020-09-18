@@ -5,6 +5,7 @@ import sys,os,datetime,time
 path_base=os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 path_base=path_base.replace('\\', '/')
 sys.path.append(path_base)
+
 from modules.mains import log
 
 from selenium import webdriver
@@ -17,11 +18,16 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 from modules.mains.new_report import newreport
 #from modules.mains.load_ini import path_ie,path_chrome,path_firefox,path_ide,path_other
-from modules.mains.load_ini import browser_path,driver_path,browser_kernel
+from modules.mains.load_ini import ReadConfig
                
 class Browser():
 
         def __init__(self):
+                brscf = ReadConfig()
+                browser_path = brscf.get_brscf("browser_path")
+                driver_path = brscf.get_brscf("driver_path")
+                browser_kernel = brscf.get_brscf("browser_kernel")
+                
                 options = eval("webdriver."+browser_kernel.title()+"Options()")
                 #options.add_argument("--headless")#不打开浏览器窗口
                 options.add_argument('--ignore-certificate-errors')
