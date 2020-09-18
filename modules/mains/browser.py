@@ -17,7 +17,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 from modules.mains.new_report import newreport
-#from modules.mains.load_ini import path_ie,path_chrome,path_firefox,path_ide,path_other
 from modules.mains.load_ini import ReadConfig
                
 class Browser():

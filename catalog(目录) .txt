@@ -9,7 +9,7 @@
 	4.msedgedriver.exe  #edge浏览器驱动
 
 三、日志/  #日志文件，由conf/logggin.conf文件配置
-	1.service.log
+	1.service.log 
 	2.today.log
 	3.max1G.log
 	
@@ -44,8 +44,8 @@
 			3.测试用例
 	。。。
 
-	1.run_yancloud_test.py  #运行平台系统执行文件
-	2.暂无			#京东商城系统执行文件
+	4.run_yancloud_test.py  #运行平台系统执行文件
+	5.暂无			#京东商城系统执行文件
 
 五、package/  #第三方依赖包，暂无
 
