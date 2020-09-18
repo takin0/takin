@@ -13,9 +13,10 @@ path_base=os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__fil
 path_base=path_base.replace('\\', '/')
 sys.path.append(path_base)
 from modules.mains import log
-from modules.mains.new_report import newreport
+from modules.mains.report import TestReport
 from modules.mains.load_ini import ReadConfig
 
+report = TestReport()
 emlcf = ReadConfig()
 email_smtpserver = emlcf.get_emcf("smtpserver")
 email_username = emlcf.get_emcf("username")
@@ -25,13 +26,13 @@ email_to_addr = emlcf.get_emcf("to_addr")
 email_port = emlcf.get_emcf("port")
 
 def send_mail():
-    source_dir = newreport()#查找最新报告的路径
-    source_dir = source_dir[0]#打包报告的路径 
-    output_filename = source_dir+'.zip'#打包后的存放路径
+    source_dir = report.get_newreport()#查找最新报告的路径
+    source_path = source_dir[0]#打包报告的路径 
+    output_filename = source_path+'.zip'#打包后的存放路径
     #打包测试报告
     zipf = zipfile.ZipFile(output_filename, 'w')
-    pre_len = len(os.path.dirname(source_dir))
-    for parent, dirnames, filenames in os.walk(source_dir):
+    pre_len = len(os.path.dirname(source_path))
+    for parent, dirnames, filenames in os.walk(source_path):
         for filename in filenames:
             pathfile = os.path.join(parent, filename)
             arcname = pathfile[pre_len:].strip(os.path.sep)   #相对路径
@@ -44,9 +45,9 @@ def send_mail():
     port = email_port 
 
     #附件路径及文件名
-    report = newreport()#再次调用查找打包好的文件
-    file_name = report[1]#打包后的文件名
-    file = report[0]#打包后的路径
+    get_report = report.get_newreport()#再次调用查找打包好的文件
+    file_name = get_report[1]#打包后的文件名
+    file = get_report[0]#打包后的路径
     #print(file_name)
     #print(file)
     #邮件主题
@@ -73,7 +74,7 @@ def send_mail():
         sleep(2)
         smtpObj.quit()
         print ("邮件发送成功")
-        os.remove(report[0])#将打包的文件删除
+        os.remove(get_report[0])#将打包的文件删除
     except smtplib.SMTPException:
         print ("发送邮件失败")
 
