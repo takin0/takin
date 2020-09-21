@@ -36,13 +36,11 @@
 		
   		4.myunit.py  #定义测试类  
 		
-		5.new_report.py  #查找最新测试报告的函数  
+		5.sendemail.py  #打包最新测试报告并发送邮件  
 		
-		6.sendemail.py  #打包最新测试报告并发送邮件  
+		6.report.py  #创建新的报告目录和查找最新的报告目录  
 		
-		7.new_report.py  #创建新的报告目录和查找最新的报告目录  
-		
-		8.new_suite.py  #创建新的测试suite和run测试suite  
+		7.suite.py  #创建新的测试suite和run测试suite  
 		
  	2 yancloud/  #运行平台系统演示  
 	
