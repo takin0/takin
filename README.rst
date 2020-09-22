@@ -1,123 +1,56 @@
-<<<<<<< HEAD
 Ò»¡¢conf/  #ÅäÖÃ
-	1.global.ini  #ä¯ÀÀÆ÷ºÍÓÊÏäÅäÖÃ£ºä¯ÀÀÆ÷µØÖ·¡¢¶ÔÓ¦Çý¶¯µØÖ·¡¢¶ÔÓ¦ÄÚºËÃû³Æ  
-	
-	2.logggin.conf  #ÈÕÖ¾ÅäÖÃ£ºÈÕÖ¾Êä³ö·½Ê½¡¢ÈÕÖ¾¸ñÊ½  
-	
+	1.global.ini  #ä¯ÀÀÆ÷ºÍÓÊÏäÅäÖÃ£ºä¯ÀÀÆ÷µØÖ·¡¢¶ÔÓ¦Çý¶¯µØÖ·¡¢¶ÔÓ¦ÄÚºËÃû³Æ
+	2.logggin.conf  #ÈÕÖ¾ÅäÖÃ£ºÈÕÖ¾Êä³ö·½Ê½¡¢ÈÕÖ¾¸ñÊ½
 
-¶þ¡¢driver/  #ä¯ÀÀÆ÷Çý¶¯  
+¶þ¡¢driver/  #ä¯ÀÀÆ÷Çý¶¯
+	1.chromedriver.exe  #¹È¸èä¯ÀÀÆ÷Çý¶¯
+	2.geckodriver.exe  #»ðºüä¯ÀÀÆ÷Çý¶¯
+	3.IEDriverServer.exe  #IEä¯ÀÀÆ÷Çý¶¯
+	4.msedgedriver.exe  #edgeä¯ÀÀÆ÷Çý¶¯
 
-	1.chromedriver.exe  #¹È¸èä¯ÀÀÆ÷Çý¶¯  
+Èý¡¢ÈÕÖ¾/  #ÈÕÖ¾ÎÄ¼þ£¬ÓÉconf/logggin.confÎÄ¼þÅäÖÃ
+	1.service.log 
+	2.today.log
+	3.max1G.log
 	
-	2.geckodriver.exe  #»ðºüä¯ÀÀÆ÷Çý¶¯  
-	
-	3.IEDriverServer.exe  #IEä¯ÀÀÆ÷Çý¶¯  
-	
-	4.msedgedriver.exe  #edgeä¯ÀÀÆ÷Çý¶¯  
-	
+ËÄ¡¢modules/  #Ö÷³ÌÐò
+	1 mains/  #Ö÷ÒªÎÄ¼þ
+  		1.browser.py  #ä¯ÀÀÆ÷³õÊ¼»¯¼°Ïà¹Ø²Ù×÷
+  		2.load_ini.py  #¼ÓÔØconf/global.iniÅäÖÃÎÄ¼þ
+  		3.log.py  #¼ÓÔØÈÕÖ¾ÅäÖÃ²¢ÊµÀý»¯
+  		4.myunit.py  #¶¨Òå²âÊÔÀà
+		5.sendemail.py  #´ò°ü×îÐÂ²âÊÔ±¨¸æ²¢·¢ËÍÓÊ¼þ
+		6.report.py  #´´½¨ÐÂµÄ±¨¸æÄ¿Â¼ºÍ²éÕÒ×îÐÂµÄ±¨¸æÄ¿Â¼
+		7.suite.py  #´´½¨ÐÂµÄ²âÊÔsuiteºÍrun²âÊÔsuite
+ 	2 yancloud/  #ÔËÐÐÆ½Ì¨ÏµÍ³ÑÝÊ¾
+  		1.login/  µÇÂ½Ä£¿éÑÝÊ¾	
+			1.element_login.py  #Ò³ÃæÔªËØÑÝÊ¾
+			2.login_procs.py  #²Ù×÷Á÷³ÌÑÝÊ¾
+			3.login_test.py  #²âÊÔÓÃÀýÑÝÊ¾
+  		2.update/  ²¿ÊðÄ£¿éÑÝÊ¾
+			1.element_update.py  #Ò³ÃæÔªËØÑÝÊ¾
+			2.update_procs.py  #²Ù×÷Á÷³ÌÑÝÊ¾
+			3.update_test.py  #²âÊÔÓÃÀýÑÝÊ¾
 
-Èý¡¢ÈÕÖ¾/  #ÈÕÖ¾ÎÄ¼þ£¬ÓÉconf/logggin.confÎÄ¼þÅäÖÃ  
-=======
-ä¸€ã€conf/  #é…ç½®
-	1.global.ini  #æµè§ˆå™¨å’Œé‚®ç®±é…ç½®ï¼šæµè§ˆå™¨åœ°å€ã€å¯¹åº”é©±åŠ¨åœ°å€ã€å¯¹åº”å†…æ ¸åç§? 
-	
-	2.logggin.conf  #æ—¥å¿—é…ç½®ï¼šæ—¥å¿—è¾“å‡ºæ–¹å¼ã€æ—¥å¿—æ ¼å¼? 
-	
-
-äºŒã€driver/  #æµè§ˆå™¨é©±åŠ? 
-
-	1.chromedriver.exe  #è°·æ­Œæµè§ˆå™¨é©±åŠ? 
-	
-	2.geckodriver.exe  #ç«ç‹æµè§ˆå™¨é©±åŠ? 
-	
-	3.IEDriverServer.exe  #IEæµè§ˆå™¨é©±åŠ? 
-	
-	4.msedgedriver.exe  #edgeæµè§ˆå™¨é©±åŠ? 
-	
-
-ä¸‰ã€æ—¥å¿?  #æ—¥å¿—æ–‡ä»¶ï¼Œç”±conf/logggin.confæ–‡ä»¶é…ç½®  
->>>>>>> master
-
-	1.service.log  
-	
-	2.today.log  
-	
-	3.max1G.log  
-	
-	
-<<<<<<< HEAD
-ËÄ¡¢modules/  #Ö÷³ÌÐò  
-
-	1 mains/  #Ö÷ÒªÎÄ¼þ  
-	
-  		1.browser.py  #ä¯ÀÀÆ÷³õÊ¼»¯¼°Ïà¹Ø²Ù×÷  
-		
-  		2.load_ini.py  #¼ÓÔØconf/global.iniÅäÖÃÎÄ¼þ  
-		
-  		3.log.py  #¼ÓÔØÈÕÖ¾ÅäÖÃ²¢ÊµÀý»¯  
-		
-  		4.myunit.py  #¶¨Òå²âÊÔÀà  
-		
-		5.sendemail.py  #´ò°ü×îÐÂ²âÊÔ±¨¸æ²¢·¢ËÍÓÊ¼þ  
-		
-		6.report.py  #´´½¨ÐÂµÄ±¨¸æÄ¿Â¼ºÍ²éÕÒ×îÐÂµÄ±¨¸æÄ¿Â¼  
-		
-		7.suite.py  #´´½¨ÐÂµÄ²âÊÔsuiteºÍrun²âÊÔsuite  
-		
- 	2 yancloud/  #ÔËÐÐÆ½Ì¨ÏµÍ³ÑÝÊ¾  
-	
-  		1.login/  µÇÂ½Ä£¿éÑÝÊ¾  
-		
-			1.element_login.py  #Ò³ÃæÔªËØÑÝÊ¾  
-			
-			2.login_procs.py  #²Ù×÷Á÷³ÌÑÝÊ¾  
-			
-			3.login_test.py  #²âÊÔÓÃÀýÑÝÊ¾  
-			
-  		2.update/  ²¿ÊðÄ£¿éÑÝÊ¾  
-		
-			1.element_update.py  #Ò³ÃæÔªËØÑÝÊ¾  
-			
-			2.update_procs.py  #²Ù×÷Á÷³ÌÑÝÊ¾  
-			
-			3.update_test.py  #²âÊÔÓÃÀýÑÝÊ¾  
-			
-
- 	3 jd/  #¾©¶«ÉÌ³ÇÏµÍ³ÑÝÊ¾  
-	
-  		1.µÇÂ½Ä£¿é  
-		
-			1.Ò³ÃæÔªËØ  
-			
-			2.²Ù×÷Á÷³Ì  
-			
-			3.²âÊÔÓÃÀý  
-			
-  		2.²¿ÊðÄ£¿é  
-		
-			1.Ò³ÃæÔªËØ  
-			
-			2.²Ù×÷Á÷³Ì  
-			
-			3.²âÊÔÓÃÀý  
-			
+ 	3 jd/  #¾©¶«ÉÌ³ÇÏµÍ³ÑÝÊ¾
+  		1.µÇÂ½Ä£¿é
+			1.Ò³ÃæÔªËØ
+			2.²Ù×÷Á÷³Ì
+			3.²âÊÔÓÃÀý
+  		2.²¿ÊðÄ£¿é
+			1.Ò³ÃæÔªËØ
+			2.²Ù×÷Á÷³Ì
+			3.²âÊÔÓÃÀý
 	¡£¡£¡£
-	
 
-	4.run_yancloud_test.py  #ÔËÐÐÆ½Ì¨ÏµÍ³Ö´ÐÐÎÄ¼þ  
-	
-	5.ÔÝÎÞ			#¾©¶«ÉÌ³ÇÏµÍ³Ö´ÐÐÎÄ¼þ  
-	
+	4.run_yancloud_test.py  #ÔËÐÐÆ½Ì¨ÏµÍ³Ö´ÐÐÎÄ¼þ
+	5.ÔÝÎÞ			#¾©¶«ÉÌ³ÇÏµÍ³Ö´ÐÐÎÄ¼þ
 
-Îå¡¢package/  #µÚÈý·½ÒÀÀµ°ü£¬ÔÝÎÞ  
+Îå¡¢package/  #µÚÈý·½ÒÀÀµ°ü£¬ÔÝÎÞ
 
+Áù¡¢report/  #²âÊÔ±¨¸æ±£´æÄ¿Â¼
 
-Áù¡¢report/  #²âÊÔ±¨¸æ±£´æÄ¿Â¼  
+Æß¡¢run_test.py  #²âÊÔ½Å±¾Ö´ÐÐÈë¿ÚÎÄ¼þ
 
-
-Æß¡¢run_test.py  #²âÊÔ½Å±¾Ö´ÐÐÈë¿ÚÎÄ¼þ  
-
-
-°Ë¡¢README.rst  #×ÔÊöÎÄ¼þ  
-
+°Ë¡¢README.rst  #×ÔÊöÎÄ¼þ
 
