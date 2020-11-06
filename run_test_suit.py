@@ -7,4 +7,9 @@ base_dir=base_dir.replace('\\', '/')
 from modules.mains import log
 from modules import run_yancloud_test
 
-run_yancloud_test.test_yancloud()
+if __name__=='__main__':
+    try:
+        run_yancloud_test.test_yancloud()
+    except:
+        log.logger.exception('abcdef')
+

@@ -1,5 +1,11 @@
 #coding=utf-8 
+'''
+    def setUp():
+        pass
 
+    def tearDown():
+        browser.create_img(sys._getframe().f_code.co_name)
+'''
 import unittest,os,sys,time
 
 path_load_ini=os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
@@ -12,7 +18,7 @@ class MyTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         browser
-
+        
     @classmethod
     def tearDownClass(cls):
         browser.quit()

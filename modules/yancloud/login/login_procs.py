@@ -7,17 +7,16 @@ path_load_ini=path_load_ini.replace('\\', '/')
 sys.path.append(path_load_ini)
 from modules.mains import log
 from modules.mains.browser import browser
-from modules.yancloud.login.element_login import username_css,password_css,login_xpath\
-,rember_css,logout_css,quxiao_xpath,queding_xpath
-
+from modules.yancloud.login.element_login import *
 
 brc=browser
 
-testurl="https://10.10.11.3:9004"
+testurl="https://10.10.11.2:9004"
 testname="quanju"
 testwd="P@ssw0rd"
 
-def login(testname,testwd,remb=""):    
+def login(testname,testwd,remb=""):
+    
     brc.open_url(testurl)
     brc.olwt(10)
     brc.by_css(username_css)
@@ -33,7 +32,7 @@ def login(testname,testwd,remb=""):
             brc.click()
     
     login=brc.by_xpath(login_xpath)
-    brc.click()  
+    brc.click()
     
 def logout(confirm=""):
     time.sleep(2)

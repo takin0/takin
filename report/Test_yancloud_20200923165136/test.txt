@@ -1,0 +1,86 @@
+login.login_test (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: login.login_test (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: login.login_test
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files (x86)\Python37-32\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Program Files (x86)\Python37-32\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files (x86)\Python37-32\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Program Files (x86)\Python37-32\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python37-32\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Program Files (x86)\Python37-32\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 11, in <module>
+    from modules.mains import myunit as myut
+  File "D:/私人/takin/model\modules\mains\myunit.py", line 15, in <module>
+    from modules.mains.browser import browser
+  File "D:/私人/takin/model\modules\mains\browser.py", line 338, in <module>
+    browser = Browser()
+  File "D:/私人/takin/model\modules\mains\browser.py", line 36, in __init__
+    self.dr = eval("webdriver."+browser_kernel.title()+"(executable_path = driver_path,options = options)")
+  File "<string>", line 1, in <module>
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 81, in __init__
+    desired_capabilities=desired_capabilities)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\request.py", line 72, in request
+    **urlopen_kw)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\request.py", line 150, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\poolmanager.py", line 323, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\util\retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Program Files (x86)\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Program Files (x86)\Python37-32\lib\http\client.py", line 1321, in getresponse
+    response.begin()
+  File "C:\Program Files (x86)\Python37-32\lib\http\client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files (x86)\Python37-32\lib\http\client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Program Files (x86)\Python37-32\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

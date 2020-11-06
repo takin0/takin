@@ -16,11 +16,13 @@ class loginTest(myut.MyTest):
     def test_correct_login(self):
         lg.login("superadmin","P@ssw0rd")
         text=u"登录1成功"
-        ts=lg.xinxi()           
+        ts=lg.xinxi()
+        '''
         if text==ts:
             pass
         else:
             browser.create_img(sys._getframe().f_code.co_name)
+        '''
         self.assertEqual(ts, text)
 
     def test_usererr_login(self):

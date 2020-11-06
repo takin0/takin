@@ -1,0 +1,23 @@
+test_correct_login (login.login_test.loginTest) ... ERROR
+test_passerr_login (login.login_test.loginTest) ... ERROR
+test_usererr_login (login.login_test.loginTest) ... ERROR
+
+======================================================================
+ERROR: test_correct_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+TypeError: setUp() takes 0 positional arguments but 1 was given
+
+======================================================================
+ERROR: test_passerr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+TypeError: setUp() takes 0 positional arguments but 1 was given
+
+======================================================================
+ERROR: test_usererr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+TypeError: setUp() takes 0 positional arguments but 1 was given
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.264s
+
+FAILED (errors=3)

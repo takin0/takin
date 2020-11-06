@@ -1,0 +1,23 @@
+login.login_test (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: login.login_test (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: login.login_test
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python37-32\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Program Files (x86)\Python37-32\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 11, in <module>
+    from modules.mains import myunit as myut
+  File "D:/私人/takin/model\modules\mains\myunit.py", line 22
+    @classmethod
+    ^
+IndentationError: unexpected indent
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

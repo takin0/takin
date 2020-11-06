@@ -1,0 +1,35 @@
+test_correct_login (login.login_test.loginTest) ... FAIL
+test_passerr_login (login.login_test.loginTest) ... FAIL
+test_usererr_login (login.login_test.loginTest) ... FAIL
+
+======================================================================
+FAIL: test_correct_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 26, in test_correct_login
+    self.assertEqual(ts, text)
+AssertionError: '' != '登录1成功'
++ 登录1成功
+
+======================================================================
+FAIL: test_passerr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 40, in test_passerr_login
+    self.assertEqual(ts, text)
+AssertionError: '' != '用户名或密码不正确！'
++ 用户名或密码不正确！
+
+======================================================================
+FAIL: test_usererr_login (login.login_test.loginTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\私人\takin\model\modules\yancloud\login\login_test.py", line 33, in test_usererr_login
+    self.assertEqual(ts, text)
+AssertionError: '' != '用户名或密码不正确！'
++ 用户名或密码不正确！
+
+----------------------------------------------------------------------
+Ran 3 tests in 81.002s
+
+FAILED (failures=3)
