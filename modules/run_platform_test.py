@@ -8,14 +8,14 @@ sys.path.append(base_dir)
 from modules.mains import log
 from modules.mains.suite import Suite
 
-test_dir = base_dir+"/modules/yancloud"
+test_dir = base_dir+"/modules/platform"
 description = u"yancloud自动化测试报告"
 test_file = "*test.py"
 
-def test_yancloud():
+def test_platform():
     suite = Suite()
     suite.run_suite(test_dir,test_file,description)
 
 
 if __name__ == '__main__':   
-    test_yancloud()
+    test_platform()
